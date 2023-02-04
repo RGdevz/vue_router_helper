@@ -1,0 +1,36 @@
+{
+  "name": "vue_routes_helper",
+  "version": "1.0.0",
+  "description": "",
+  "scripts": {
+    "build": "vite build",
+    "prestart": "npm run build",
+    "start": "node dist/routes_generator.cjs"
+  },
+  "main": "./dist/routes_generator.cjs",
+  "module": "./dist/routes_generator.js",
+  "types": "./dist/index.d.ts",
+  "type": "module",
+  "exports": {
+    ".": {
+      "import": "./dist/routes_generator.js",
+      "require": "./dist/routes_generator.cjs"
+    }
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "fast-glob": "^3.2.12",
+    "fs-extra": "^11.1.0",
+    "prettier": "^2.8.3"
+  },
+  "devDependencies": {
+    "@types/fs-extra": "^11.0.1",
+    "@types/node": "^14.18.36",
+    "@vue/compiler-sfc": "^3.2.47",
+    "vite": "^4.1.1",
+    "vite-plugin-dts": "^1.7.2",
+    "vue": "^3.2.47",
+    "vue-template-compiler": "^2.7.14"
+  }
+}
